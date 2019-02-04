@@ -1,0 +1,85 @@
+.reveal,.codepen {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+.reveal {
+  left: 0;
+  width: 60%;
+}
+.codepen {
+  right: 0;
+  width: 40%;
+}
+
+.codepen iframe {
+  height: 100%;
+  width: 100%;
+  border: none !important;
+  border-left: 1px solid #aaa !important;
+}
+
+
+.first .slide-background-content {
+  background-image: url('/img/image1-small.png');
+  background-color: #fafafa;
+  background-position: center;
+  background-size: 80%;
+}
+
+.lesson .slide-background-content {
+  background-image: url('/img/image3.png');
+  background-position: bottom 40px right 40px;
+  background-size: 30%;
+}
+
+.last .slide-background-content {
+  background-image: url('/img/image3.png');
+  background-color: #fafafa;
+  background-position: bottom 20% center;
+  background-size: 40%;
+}
+
+section.last {
+  text-align: center;
+  margin-top: 100px;
+}
+
+
+section {
+  height: 100vh;
+}
+
+.reveal .highlight table {
+  width: 100%;
+  margin: 0;
+  margin-left: -5px;
+}
+.reveal table td.code {
+  padding: 0;
+  margin-left: -5px;
+}
+.reveal .highlight pre {
+  font-size: 16px;
+  width: 100%;
+  margin: 0;
+  display: block;
+  padding: 5px;
+  overflow: auto;
+  max-height: 400px;
+  word-wrap: normal;
+}
+
+.topic {
+  padding: 0;
+}
+.topic h1 {
+  top: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.reveal .slides {
+  text-align: left;
+}

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>Типы и операторы JS | Hexo</title>
+
+  
+    <link rel="icon" href="/favicon.png">
+  
+
+  <link rel="stylesheet" href="/css/reveal.css">
+  <link rel="stylesheet" href="/css/otus.css">
+  <link rel="stylesheet" href="/css/theme/white.css">
+  <!-- Theme used for syntax highlighting of code -->
+  <link rel="stylesheet" href="/lib/css/tomorrow.css">
+
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? '/css/print/pdf.css' : '/css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+  </script>
+</head>
+</html>
+<body>
+  <div class="reveal">
+  <div class="slides">
+    <section class="first"></section>
+
+    <section class="lesson">
+      <h1>Типы и операторы JS</h1>
+      <h2>Введение в JavaScript</h2>
+    </section>
+
+    
+    
+      
+      
+        <section class="regular"><h2 id="Что-мы-пройдем"><a href="#Что-мы-пройдем" class="headerlink" title="Что мы пройдем"></a>Что мы пройдем</h2><ul>
+<li><p>A value is a piece of information. The type of a value defines its role and the operations applicable to it.</p>
+</li>
+<li><p>The JavaScript language uses the number type to represent a numerical value (with or without decimals) and the string<br>type to represent text.</p>
+</li>
+<li><p>A string value is surrounded by a pair of single quotes <code>&#39;...&#39;</code> or a pair of quotation marks <code>&quot;...&quot;</code>.</p>
+</li>
+<li><p>Arithmetic operations between numbers are provided by the +, -, * and / operators. Applied to two strings, the +<br>operator joins them together. This operation is called concatenation.</p>
+</li>
+</ul>
+</section>
+      
+    
+      
+      
+        <section class="topic"><h1 id="Типы-и-значения"><a href="#Типы-и-значения" class="headerlink" title="Типы и значения"></a>Типы и значения</h1></section>
+      
+    
+      
+      
+        <section class="regular"><h2 id="Типы-и-значения-1"><a href="#Типы-и-значения-1" class="headerlink" title="Типы и значения"></a>Типы и значения</h2></section>
+      
+    
+      
+      
+        <section class="topic"><h1 id="Числа"><a href="#Числа" class="headerlink" title="Числа"></a>Числа</h1></section>
+      
+    
+      
+      
+        <section class="regular"><h2 id="Числа-1"><a href="#Числа-1" class="headerlink" title="Числа"></a>Числа</h2><p>Values of the number type are, unsurprisingly, numeric values. In a JavaScript program, they are written as follows:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="number">13</span></span><br><span class="line"><span class="number">678</span></span><br><span class="line"><span class="number">9042</span></span><br></pre></td></tr></table></figure>
+<p>Fractional numbers are written by using a dot.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="number">9.81</span></span><br><span class="line"><span class="number">0.6</span></span><br><span class="line"><span class="number">3.000001</span></span><br></pre></td></tr></table></figure>
+<p>Если целая часть числа равна нулю, можно не писать её — вместо 0.6 писать</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="number">.6</span></span><br></pre></td></tr></table></figure>
+</section>
+      
+    
+      
+      
+        <section class="regular"><h2 id="Операторы-арифметика"><a href="#Операторы-арифметика" class="headerlink" title="Операторы (арифметика)"></a>Операторы (арифметика)</h2><p>В JS есть все базовые арифметические операторы:</p>
+<table><br>  <tr><br>    <td><code>+</code></td><br>    <td>Сложение</td><br>  </tr><br>  <tr><br>    <td><code>-</code></td><br>    <td>Вычитание</td><br>  </tr><br>  <tr><br>    <td><code>*</code></td><br>    <td>Умножение</td><br>  </tr><br>  <tr><br>    <td><code>/</code></td><br>    <td>Деление</td><br>  </tr><br></table>
+
+</section>
+      
+    
+      
+      
+        <section class="regular"><h2 id="Приоритеты-операторов"><a href="#Приоритеты-операторов" class="headerlink" title="Приоритеты операторов"></a>Приоритеты операторов</h2><p>Штуки из второго класса (сначала умножаем, потом складываем) работают в JS так, как вы этого ожидаете.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="number">100</span> + <span class="number">4</span> * <span class="number">11</span></span><br><span class="line"><span class="number">100</span> + <span class="number">4</span> * <span class="number">11</span></span><br></pre></td></tr></table></figure>
+<p>Если это не то, что вам нужно — используйте скобки:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">(<span class="number">100</span> + <span class="number">4</span>) * <span class="number">11</span></span><br></pre></td></tr></table></figure>
+<p>Сомневаетесь — ставьте скобки ;)</p>
+</section>
+      
+    
+      
+      
+        <section class="regular"><h2 id="Специальные-числа"><a href="#Специальные-числа" class="headerlink" title="Специальные числа"></a>Специальные числа</h2><p><code>Infinity</code> (и его друг <code>-Infinity</code>) — JS-вариант «бесконечности». Вылезти из этого значения сложно:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="literal">Infinity</span> + <span class="number">100</span></span><br><span class="line"><span class="literal">Infinity</span> - <span class="number">100</span></span><br><span class="line"><span class="number">2</span> * <span class="literal">Infinity</span></span><br><span class="line"><span class="literal">Infinity</span> + <span class="literal">Infinity</span></span><br></pre></td></tr></table></figure>
+<p>На безумные вопросы JS отвечает <code>NaN</code> — Not a Number.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="literal">Infinity</span> - <span class="literal">Infinity</span></span><br><span class="line"><span class="number">100</span> / <span class="number">0</span></span><br><span class="line"><span class="number">0</span> / <span class="number">0</span></span><br></pre></td></tr></table></figure>
+<p><code>NaN</code> тоже пожирает все операции со своим участием:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="literal">NaN</span> * <span class="number">100</span></span><br><span class="line"><span class="literal">NaN</span> + <span class="number">1</span></span><br><span class="line"><span class="literal">NaN</span> * <span class="number">0</span></span><br></pre></td></tr></table></figure>
+<p>Логично — чему равно «<em>какое-то число</em> плюс 1»?</p>
+</section>
+      
+    
+      
+      
+        <section class="regular"><h2 id="Представление-чисел-в-памяти"><a href="#Представление-чисел-в-памяти" class="headerlink" title="Представление чисел в памяти"></a>Представление чисел в памяти</h2><p>Числа в JS (и в других языках программирования) не так безупречны, как в математике.</p>
+<p>Ркзультат этих выражений может вас удивить:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="number">0.3</span> + <span class="number">0.6</span></span><br><span class="line">(<span class="number">0.3</span> + <span class="number">0.6</span> + <span class="number">0.2</span>) - (<span class="number">0.3</span> + (<span class="number">0.6</span> + <span class="number">0.2</span>))</span><br><span class="line"><span class="number">9007199254740991</span> * <span class="number">10</span></span><br><span class="line">(<span class="number">9007199254740991</span> * <span class="number">10</span> + <span class="number">1</span>) - (<span class="number">9007199254740991</span> * <span class="number">10</span>)</span><br></pre></td></tr></table></figure>
+<p>Настоящих чисел бесконечно много, а памяти в компьютере — нет, и можно представить всего 2^64 разных значений. Не бойтесь:</p>
+<ul>
+<li>На практике проблемы с этим возникают редко.</li>
+<li>Если нужны <em>огромные</em> числа или точные дроби — используйте специальные библиотеки.</li>
+</ul>
+</section>
+      
+    
+      
+      
+        <section class="topic" data-background-color="black">
+      
+    
+      
+      
+        <section class="topic"><h1>Строки</h1></section>
+
+</section>
+      
+    
+      
+      
+        <section class="regular"><h2 id="Запись-строк"><a href="#Запись-строк" class="headerlink" title="Запись строк"></a>Запись строк</h2><p>Пишите строки в JS в таких кавычках, в каких хотите:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="string">`Down on the sea`</span></span><br><span class="line"><span class="string">"Lie on the ocean"</span></span><br><span class="line"><span class="string">'Float on the ocean'</span></span><br></pre></td></tr></table></figure>
+<p>Понятно, что в строке внутри кавычек не могут стоять такие же кавычки: компьютеру кажется, что строка кончилась после «внутренней»:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="string">'MacMurdoch'</span>s Pub<span class="string">'</span></span><br></pre></td></tr></table></figure>
+<p>Экранируйте (пишите перед внутренней кавычкой <code>\</code>)!</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="string">'MacMurdoch\'s Pub'</span></span><br></pre></td></tr></table></figure>
+<p>Этот трюк также поможет с другими специальными символами:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="string">'MacMurdoch\'s Pub\nFamous Irish Cider'</span></span><br></pre></td></tr></table></figure>
+</section>
+      
+    
+      
+      
+        <section class="regular"><h2 id="Конкатенация-и-интерполяция"><a href="#Конкатенация-и-интерполяция" class="headerlink" title="Конкатенация и интерполяция"></a>Конкатенация и интерполяция</h2><p>Что значит <em>поделить</em>, <em>вычесть</em> или <em>перемножить</em> строки — непонятно, но зато их можно <em>складывать</em>:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="string">"hell"</span> + <span class="string">"o"</span></span><br><span class="line"><span class="string">"hello"</span> + <span class="string">" "</span> + <span class="string">"Vladimir"</span></span><br></pre></td></tr></table></figure>
+<p>Эта операция называется <em>конкатенацией.</em></p>
+<p>У строк в «косых кавычках» <code></code> ` есть волшебная операция — вставить в строку результат выражения:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="string">`Half of <span class="subst">$&#123; <span class="number">100</span> &#125;</span> is <span class="subst">$&#123; <span class="number">100</span> <span class="regexp">/ 2 &#125;`</span></span></span></span><br></pre></td></tr></table></figure>
+<p><em>pro tip:</em> Умножать строку на число, как в питоне <code>3 * &#39;a&#39; -&gt; &#39;aaa&#39;</code> — мило, но в JS такого нет.</p>
+</section>
+      
+    
+      
+      
+        <section class="topic"><h1 id="Сравнение"><a href="#Сравнение" class="headerlink" title="Сравнение"></a>Сравнение</h1></section>
+      
+    
+      
+      
+        <section class="regular"><h2 id="Операторы-сравнения"><a href="#Операторы-сравнения" class="headerlink" title="Операторы сравнения"></a>Операторы сравнения</h2></section>
+      
+    
+      
+      
+        <section class="regular"><h2 id="Неявное-приведение-типов-сравнение"><a href="#Неявное-приведение-типов-сравнение" class="headerlink" title="Неявное приведение типов: сравнение"></a>Неявное приведение типов: сравнение</h2></section>
+      
+    
+      
+      
+        <section class="regular"><h2 id="Неявное-приведение-типов-операторы"><a href="#Неявное-приведение-типов-операторы" class="headerlink" title="Неявное приведение типов: операторы"></a>Неявное приведение типов: операторы</h2></section>
+      
+    
+      
+      
+        <section class="topic"><h1 id="Boolean"><a href="#Boolean" class="headerlink" title="Boolean"></a>Boolean</h1></section>
+      
+    
+      
+      
+        <section class="regular"><h2 id="Операторы-логика"><a href="#Операторы-логика" class="headerlink" title="Операторы (логика)"></a>Операторы (логика)</h2></section>
+      
+    
+      
+      
+        <section class="topic"><h1 id="Пустые-значения"><a href="#Пустые-значения" class="headerlink" title="Пустые значения"></a>Пустые значения</h1></section>
+      
+    
+      
+      
+        <section class="topic"><h1 id="Явное-приведение-типов"><a href="#Явное-приведение-типов" class="headerlink" title="Явное приведение типов"></a>Явное приведение типов</h1></section>
+      
+    
+      
+      
+        <section class="topic" data-background-color="#4f3">
+      
+    
+      
+      
+        <section class="topic"><h1>Повторяем</h1></section>
+
+</section>
+      
+    
+
+    <section class="last">
+      <h1>Спасибо за внимание!</h1>
+    </section>
+  </div>
+</div>
+<div class="codepen">
+  <iframe src="https://jsconsole.com/"></iframe>
+  <!-- <iframe src="https://repljs.com/thoughtspile/eXFOlcNrF"></iframe> -->
+  <!-- <iframe src="http://codepen.io/thoughtspile/pen/vbmpWw?editors=0011"></iframe> -->
+</div>
+
+
+  <script src="/lib/js/head.min.js"></script>
+<script src="/js/reveal.js"></script>
+
+<script>
+  const getSize = w => {
+    const el = document.getElementsByClassName('reveal')[0];
+    return {
+      height: el.offsetHeight,
+      width: Math.floor(el.offsetWidth - 80)
+    };
+  };
+  // More info about config & dependencies:
+  // - https://github.com/hakimel/reveal.js#configuration
+  // - https://github.com/hakimel/reveal.js#dependencies
+  Reveal.initialize(Object.assign(getSize(), {
+    controls: false,
+    slideNumber: true,
+    history: true,
+    center: false,
+    minScale: 1,
+    maxScale: 1,
+    dependencies: [
+      // { src: '/plugin/markdown/marked.js' },
+      // { src: '/plugin/markdown/markdown.js' },
+      { src: '/plugin/notes/notes.js', async: true },
+      // { src: '/plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } }
+    ]
+  }));
+  window.addEventListener('resize', () => {
+    Reveal.configure(getSize());
+  });
+</script>
+
+</body>
+</html>

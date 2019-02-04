@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>Типы и операторы JS | Hexo</title>
+
+  
+    <link rel="icon" href="/favicon.png">
+  
+
+  <link rel="stylesheet" href="/css/reveal.css">
+  <link rel="stylesheet" href="/css/otus.css">
+  <link rel="stylesheet" href="/css/theme/white.css">
+  <!-- Theme used for syntax highlighting of code -->
+  <link rel="stylesheet" href="/lib/css/tomorrow.css">
+
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? '/css/print/pdf.css' : '/css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+  </script>
+</head>
+</html>
+<body>
+  <div class="reveal">
+  <div class="slides">
+    <section class="first"></section>
+
+    <section class="lesson">
+      <h1>Типы и операторы JS</h1>
+      <h2>Введение в JavaScript</h2>
+    </section>
+
+    
+    
+      
+      
+        <section class="regular"><h2 id="Что-мы-пройдем"><a href="#Что-мы-пройдем" class="headerlink" title="Что мы пройдем"></a>Что мы пройдем</h2><ul>
+<li><p>A value is a piece of information. The type of a value defines its role and the operations applicable to it.</p>
+</li>
+<li><p>The JavaScript language uses the number type to represent a numerical value (with or without decimals) and the string<br>type to represent text.</p>
+</li>
+<li><p>A string value is surrounded by a pair of single quotes <code>&#39;...&#39;</code> or a pair of quotation marks <code>&quot;...&quot;</code>.</p>
+</li>
+<li><p>Arithmetic operations between numbers are provided by the +, -, * and / operators. Applied to two strings, the +<br>operator joins them together. This operation is called concatenation.</p>
+</li>
+</ul>
+</section>
+      
+    
+      
+      
+        <section class="topic"><h1 id="Типы"><a href="#Типы" class="headerlink" title="Типы"></a>Типы</h1></section>
+      
+    
+      
+      
+        <section class="regular"><h2 id="Типы-и-значения"><a href="#Типы-и-значения" class="headerlink" title="Типы и значения"></a>Типы и значения</h2><p>owejrng jls<br>er gweg kjwng ,wr l erg</p>
+</section>
+      
+    
+      
+      
+        <section class="topic" data-background-color="fuchsia">
+      
+    
+      
+      
+        <section class="topic"><h1>Строки</h1></section>
+
+</section>
+      
+    
+      
+      
+        <section class="regular"><h2 id="Строки"><a href="#Строки" class="headerlink" title="Строки"></a>Строки</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="string">"hello"</span> + <span class="string">" "</span> + <span class="string">"Vladimir"</span>;</span><br><span class="line"><span class="string">"hello"</span> + <span class="string">" "</span> + <span class="string">"Vladimir"</span>;</span><br><span class="line"><span class="string">"hello"</span> + <span class="string">" "</span> + <span class="string">"Vladimir"</span>;</span><br><span class="line"><span class="string">"hello"</span> + <span class="string">" "</span> + <span class="string">"Vladimir"</span>;</span><br><span class="line"><span class="string">"hello"</span> + <span class="string">" "</span> + <span class="string">"Vladimir"</span>;</span><br><span class="line"><span class="string">"hello"</span> + <span class="string">" "</span> + <span class="string">"Vladimir"</span>;</span><br><span class="line"></span><br><span class="line"><span class="string">"bye"</span></span><br></pre></td></tr></table></figure>
+</section>
+      
+    
+
+    <section class="last">
+      <h1>Спасибо за внимание!</h1>
+    </section>
+  </div>
+</div>
+<div class="codepen">
+  <iframe src="https://jsconsole.com/"></iframe>
+  <!-- <iframe src="https://repljs.com/thoughtspile/eXFOlcNrF"></iframe> -->
+  <!-- <iframe src="http://codepen.io/thoughtspile/pen/vbmpWw?editors=0011"></iframe> -->
+</div>
+
+
+  <script src="/lib/js/head.min.js"></script>
+<script src="/js/reveal.js"></script>
+
+<script>
+  const getSize = w => {
+    const el = document.getElementsByClassName('reveal')[0];
+    return {
+      height: el.offsetHeight,
+      width: Math.floor(el.offsetWidth - 80)
+    };
+  };
+  // More info about config & dependencies:
+  // - https://github.com/hakimel/reveal.js#configuration
+  // - https://github.com/hakimel/reveal.js#dependencies
+  Reveal.initialize(Object.assign(getSize(), {
+    controls: false,
+    slideNumber: true,
+    history: true,
+    center: false,
+    minScale: 1,
+    maxScale: 1,
+    dependencies: [
+      // { src: '/plugin/markdown/marked.js' },
+      // { src: '/plugin/markdown/markdown.js' },
+      { src: '/plugin/notes/notes.js', async: true },
+      // { src: '/plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } }
+    ]
+  }));
+  window.addEventListener('resize', () => {
+    Reveal.configure(getSize());
+  });
+</script>
+
+</body>
+</html>
